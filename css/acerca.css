@@ -1,0 +1,122 @@
+:root{
+  --padding-container: 100px 0;
+  --color-title: white;
+}
+
+body {
+  background-color: #1d0b80;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.acerca.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+.acerca .hero{
+  width: 100%;
+  height: 100vh;
+  min-height: 1000px;
+  max-height: 1000px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  color: white;
+}
+
+.acerca .hero::before{
+  display: none;
+}
+
+/* Hero container */
+
+.hero__container{
+  max-width: 1000px;
+  display: grid;
+  --padding-container: 0;
+  grid-auto-rows: max-content;
+  align-content: center;
+  gap: 1em;
+  padding-bottom: 600px;
+  text-align: left;
+}
+
+.acerca .hero__title{
+  text-align:center;
+  margin-top: 5.5rem;
+  color: var(--color-title);
+}
+
+.acerca .hero__paragraph{
+  text-align: justify;
+  line-height: 1.5;
+  color: var(--color-title)
+}
+
+.acerca .cta{
+  display: inline-block;
+  background-color: #ff3ce6;
+  color: #1d0b80;
+  padding: 13px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.principales__disciplinas{
+  position: relative;
+  bottom: 550px;
+}
+
+.card{
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.container__disciplinas{
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  padding: auto;
+  position: relative;
+  bottom: 650px;
+}
+
+.disciplinas__title{
+  font-size: 16px;
+  color: var(--color-title);
+  margin-bottom: 1rem;
+}
+
+.disciplinas__card:hover{
+  transform: scale(1.05);
+}
+
+.disciplinas__card img{
+  width: 200px;
+  height: 100px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  
+}
+
+.cta_centrado {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #ff3ce6;
+  color: #1d0b80;
+}
