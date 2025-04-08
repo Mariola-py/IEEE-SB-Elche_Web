@@ -111,12 +111,60 @@ body {
   height: 100px;
   margin-bottom: 1rem;
   border-radius: 10px;
+  position: relative;
   
 }
 
-.cta_centrado {
-  text-align: center;
+.cta__centrado {
+  display: inline-block;
+  justify-self: center;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 30px;
+  margin-top: 1.5rem;
+}
+
+.hero__container, .beneficios__container {
+  max-width: 1000px;
+  display: grid;
+  grid-auto-rows: max-content;
+  align-content: center;
+  gap: 2em;
+  padding-bottom: 600px;
+  text-align: left;
+}
+
+.beneficios__title {
+  text-align: justify;
+  margin-top: 4.5rem;
+  color: var(--color-title);
+  font-size: 3rem;
+  font-weight: bold;
+  
+}
+.beneficios__subtitle {
+  text-align: justify;
   margin-top: 2rem;
-  background-color: #ff3ce6;
-  color: #1d0b80;
+  color: var(--color-title);
+  font-size: 2rem;
+  font-weight: bold;
+  
+}
+
+.beneficios__container{
+  position: relative;
+  bottom: 1400px;
+}
+
+
+.beneficios__container ul li {
+  margin-bottom: 0.5rem; 
+  text-indent: -0.5em; 
+  padding-left: 1.5em; 
+  text-align: left;
+  position: relative; 
+}
+
+.espaciado{
+  margin-top: 10px;
 }
