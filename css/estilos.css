@@ -32,11 +32,16 @@ header{
     height: 100px;
     z-index: 10;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 0 120px;
+    transition: all .4s;
 }
 
-.nav__title{
-    font-weight: 300;
+
+html:not([data-scroll='0']) header {
+    background-image: linear-gradient(-90deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+    font-size: 1.05rem;
 }
 
 .nav__link{
