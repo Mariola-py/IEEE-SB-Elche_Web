@@ -22,6 +22,11 @@ const debounce = (fn) => {
 // so we can use it in our stylesheets
 const storeScroll = () => {
     document.documentElement.dataset.scroll = window.scrollY;
+
+    // calculate the percentage of the total scrollable height
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = (window.scrollY / scrollableHeight) * 100;
+    document.body.style.setProperty('--scroll-percent', scrollPercentage.toFixed(2) + '%');
 }
 
 // Listen for new scroll events, here we debounce our `storeScroll` function

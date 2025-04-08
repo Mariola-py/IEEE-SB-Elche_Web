@@ -6,6 +6,8 @@
 
     --color-accent-secondary: #4bdce5;
     --color-accent: #4cafbb;
+    --color-accent-secondary-90: rgba(75, 220, 229, 0.9); /* 60% de opacidad */
+    --color-accent-90: rgba(76, 175, 187, 0.9); /* 60% de opacidad */
 }
 
 body {
@@ -21,6 +23,18 @@ body {
 }
 
 /* Nav */
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: var(--scroll-percent);
+    height: 4px;
+    border-radius: 2px;
+    background-color: #09f;
+    z-index: -1;
+    transition: width .3s ease-out;
+}
 
 header{
     background-color: transparent;
@@ -40,8 +54,10 @@ header{
 
 
 html:not([data-scroll='0']) header {
-    background-image: linear-gradient(-90deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+    background-image: linear-gradient(-90deg, var(--color-accent-90) 0%, var(--color-accent-secondary-90) 100%);
     font-size: 1.05rem;
+    backdrop-filter: blur(10px);
+    /* opacity: 0.6; */
 }
 
 .nav__link{
@@ -89,7 +105,7 @@ html:not([data-scroll='0']) header {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 100vw;
@@ -107,9 +123,15 @@ html:not([data-scroll='0']) header {
     height: calc(100vh + 100px);
     background-image: linear-gradient(180deg, #ffffff4b 0%, #ffffff4b 100%), url(../images/BrazoRobot.jpg);
     background-size: cover;
+    background-attachment: fixed;
     z-index: -1;
-    transform: scale(1.2) translateY(130px);
+}
 
+.hero article{
+    width: 100%;
+    margin-top: -80px;
+    backdrop-filter: blur(7px);
+    padding: 20px 0;
 }
 
 .hero div{
