@@ -112,29 +112,8 @@ html:not([data-scroll='0']) header {
 
 }
 
-.hero__container>div{
-    position: absolute;
-    bottom: 12rem;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-}
-
-.hero__container{
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    --padding-container: 0;
-    align-content: center;
-    gap: 1em;
-    padding-bottom: 600px;
-    text-align: left;
-    margin-top: 40px;
+.hero div{
+    margin-top: 2rem;
 }
 
 .hero__title{
