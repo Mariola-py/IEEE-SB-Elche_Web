@@ -1,170 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Lexend:wght@400;700&display=swap');
+
 :root{
   --padding-container: 100px 0;
-  --color-title: white;
+  --color-title: #ffffff;
+  --color-bg: #1d0b80;
+  --font-family-title: 'Inter', sans-serif;
+  --font-weight-title: 800;
+  --font-size-title: 3rem;
+  --font-family-subtitle: 'Lexend', sans-serif;
+  --font-weight-subtitle: 400;
+  --font-size-subtitle: 1.3rem;
 }
 
-body {
-  background-color: #1d0b80;
-  font-family: 'Poppins', sans-serif;
+.container{
+  width:min(90%,1200px);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  box-sizing: border-box;
+  padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
-
-
-.acerca.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: var(--padding-container);
+body.acerca{
+  background:var(--color-bg);
+  color:var(--color-title);
 }
 
-.acerca .hero{
+.about-hero{
   width: 100%;
-  height: 100vh;
-  min-height: 1000px;
-  max-height: 1000px;
-  position: relative;
-  display: grid;
-  grid-template-rows: 100px 1fr;
-  color: white;
-}
-
-.acerca .hero::before{
-  display: none;
-}
-
-/* Hero container */
-
-.hero__container{
-  max-width: 1000px;
-  display: grid;
-  --padding-container: 0;
-  grid-auto-rows: max-content;
-  align-content: center;
-  gap: 1em;
-  padding-bottom: 600px;
-  text-align: left;
-}
-
-.acerca .hero__title{
+  height: 80vh;
   text-align:center;
-  margin-top: 5.5rem;
-  color: var(--color-title);
+  min-height: 600px;
+  max-height: 800px;
+  color: #ffffff;
 }
 
-.acerca .hero__paragraph{
-  text-align: justify;
-  line-height: 1.5;
-  color: var(--color-title)
+.about-hero__title{
+  margin: 5rem 0 2rem;
+  font-size: var(--font-size-title);
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-title);
+}
+
+.about-hero__paragraph{
+  text-align:justify;
+  line-height: 1.7;
+  margin:0 auto 1rem;
+  font-family: var(--font-family-subtitle);
+  font-weight: var(--font-weight-subtitle);
+  font-size: var(--font-size-subtitle);
 }
 
 .acerca .cta{
   display: inline-block;
-  background-color: #ff3ce6;
+  background-color:#ff3ae6;
+  justify-self: center;
   color: #1d0b80;
-  padding: 13px 20px;
-  border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-
+  padding: 13px 20px;
+  margin-block: 1rem 4rem;
+  margin-inline: 0;
+  border-radius: 30px;
+  transition:background-color .3s, transform .3s;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  width: fit-content;
+  font-family: var(--font-family-subtitle);
+  font-weight: var(--font-weight-subtitle);
+  font-size: var(--font-size-subtitle);
 }
 
-.principales__disciplinas{
-  position: relative;
-  bottom: 550px;
-}
-
-.card{
-  background-color: white;
-  border-radius: 15px;
-  padding: 1.5rem;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.container__disciplinas{
-  
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.disciplinas{
+  margin-top: 3rem;
   text-align: center;
-  padding: auto;
-  position: relative;
-  bottom: 650px;
+  padding:0;
 }
 
 .disciplinas__title{
-  font-size: 16px;
   color: var(--color-title);
-  margin-bottom: 1rem;
-}
-
-.disciplinas__card:hover{
-  transform: scale(1.05);
-}
-
-.disciplinas__card img{
-  width: 200px;
-  height: 100px;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  position: relative;
-  
-}
-
-.cta__centrado {
-  display: inline-block;
-  justify-self: center;
-  text-decoration: none;
-  padding: 13px 20px;
-  border-radius: 30px;
-  margin-top: 1.5rem;
-}
-
-.hero__container, .beneficios__container {
-  max-width: 1000px;
-  display: grid;
-  grid-auto-rows: max-content;
-  align-content: center;
-  gap: 2em;
-  padding-bottom: 600px;
-  text-align: left;
-}
-
-.beneficios__title {
-  text-align: justify;
-  margin-top: 4.5rem;
-  color: var(--color-title);
+  text-align:center;
   font-size: 3rem;
-  font-weight: bold;
-  
+  margin-bottom:2rem;
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-size-title);
 }
-.beneficios__subtitle {
-  text-align: justify;
+
+.disciplinas__paragraph{
+  text-align:justify;
+  line-height: 1.7;
+  margin:0 auto 1rem;
+  font-family: var(--font-family-subtitle);
+  font-weight: var(--font-weight-subtitle);
+  font-size: var(--font-size-subtitle);
+}
+
+.disciplinas__grid{
+  padding-block: 2rem;
   margin-top: 2rem;
-  color: var(--color-title);
-  font-size: 2rem;
-  font-weight: bold;
-  
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 }
 
-.beneficios__container{
-  position: relative;
-  bottom: 1400px;
+.card{
+  background:white;
+  border-radius:15px;
+  padding:1.5rem;
+  text-align:center;
+  color:#1d0b80;
+  font-family: var(--font-family-subtitle);
+  font-weight: var(--font-weight-subtitle);
+  font-size: 1rem;
+  transition:transform .3s;
 }
 
-
-.beneficios__container ul li {
-  margin-bottom: 0.5rem; 
-  text-indent: -0.5em; 
-  padding-left: 1.5em; 
-  text-align: left;
-  position: relative; 
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:
+    0 4px 14px 0 rgba(0,0,0,.22),
+    0 0 16px 4px rgba(75,220,229,.32);
 }
 
-.espaciado{
-  margin-top: 10px;
+.card img{
+  width:180px;
+  height:90px;
+  object-fit:contain;
 }
